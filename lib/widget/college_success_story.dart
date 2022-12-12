@@ -18,7 +18,7 @@ class CollegeSuccessStory extends StatelessWidget {
           " Stories",
           style: GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.w500),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SizedBox(
@@ -26,14 +26,21 @@ class CollegeSuccessStory extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              Row(
-                children: [
-                  buildStory(size),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  buildStory(size)
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Row(
+                  children: [
+                    buildStory(size),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    buildStory(size),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    buildStory(size)
+                  ],
+                ),
               ),
             ],
           ),
@@ -44,20 +51,20 @@ class CollegeSuccessStory extends StatelessWidget {
 
   Container buildStory(Size size) {
     return Container(
-      height: size.height / 4,
-      width: size.width / 1.5,
-      padding: EdgeInsets.only(left: 20, top: 10),
+      height: 170,
+      width: 250,
+      padding: const EdgeInsets.only(left: 20, top: 10, right: 10),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(color: Colors.grey, blurRadius: 5, offset: Offset(1, 2))
           ]),
       child: Column(
         children: [
           Row(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 backgroundColor: Colors.amber,
                 radius: 30,
                 backgroundImage: AssetImage("assets/nature1.png"),
@@ -83,7 +90,7 @@ class CollegeSuccessStory extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           AutoSizeText(

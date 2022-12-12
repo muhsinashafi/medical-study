@@ -17,7 +17,7 @@ class Start3 extends StatelessWidget {
                   fontWeight: FontWeight.bold, fontSize: 25),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Center(

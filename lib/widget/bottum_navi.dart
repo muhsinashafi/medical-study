@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../screen/home_screen.dart';
 import '../screen/location_screen.dart';
 import '../screen/search_screen.dart';
 import '../screen/type_screen.dart';
 
+// ignore: camel_case_types
 class Bottum_navi extends StatefulWidget {
   const Bottum_navi({super.key, required this.currentIndex});
   final int currentIndex;
@@ -12,6 +12,7 @@ class Bottum_navi extends StatefulWidget {
   State<Bottum_navi> createState() => _Bottum_naviState();
 }
 
+// ignore: camel_case_types
 class _Bottum_naviState extends State<Bottum_navi> {
   void onTap(int index) {
     if (widget.currentIndex != index) {
@@ -20,26 +21,30 @@ class _Bottum_naviState extends State<Bottum_navi> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => HomeScreen(),
+                builder: (context) => const HomeScreen(),
               ));
 
           break;
 
         case 1:
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => SearchScreen()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const SearchScreen()));
 
           break;
 
         case 2:
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => LocationScreen()));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const LocationScreen(
+                        data: 'new data',
+                      )));
 
           break;
 
         case 3:
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => TypeScreen()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const TypeScreen()));
       }
     } else {}
   }
@@ -47,7 +52,7 @@ class _Bottum_naviState extends State<Bottum_navi> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      items: [
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: "Home",
@@ -61,7 +66,7 @@ class _Bottum_naviState extends State<Bottum_navi> {
         BottomNavigationBarItem(icon: Icon(Icons.view_comfy), label: "Type"),
       ],
       currentIndex: widget.currentIndex,
-      selectedItemColor: Color(0xff2A8B9E),
+      selectedItemColor: const Color(0xff2A8B9E),
       unselectedItemColor: Colors.grey,
       showUnselectedLabels: true,
 

@@ -9,12 +9,13 @@ class CollegeProgrammer extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      height: size.height / 3.5,
-      width: size.width / 1.2,
-      padding: EdgeInsets.only(left: 15, bottom: 15, right: 15, top: 15),
+      height: 210,
+      //size.height / 3.4,
+      width: size.width / 1.1,
+      padding: const EdgeInsets.only(left: 15, bottom: 15, right: 15, top: 15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [BoxShadow(blurRadius: 5, color: Colors.grey)],
+        boxShadow: const [BoxShadow(blurRadius: 5, color: Colors.grey)],
         color: Colors.white,
       ),
       child: Column(
@@ -25,29 +26,49 @@ class CollegeProgrammer extends StatelessWidget {
             style:
                 GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w600),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text(
-            "No. of Courses: 2 Courses(126 Seats) ",
-            style:
-                GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 12),
+          Row(
+            children: [
+              Text(
+                "No. of Courses: ",
+                style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w400, fontSize: 12),
+              ),
+              Text(
+                "2 Courses",
+                style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 12,
+                    color: const Color(0xff4BB4C8)),
+              ),
+              Text(
+                "(126 Seats) ",
+                style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w400, fontSize: 12),
+              ),
+            ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
             "Eligibility Criteria:",
-            style:
-                GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 12),
+            style: GoogleFonts.poppins(
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                color: const Color(0xff686868)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           AutoSizeText(
             "Lorem ipsum dolor sit amet consectetur adipisicing molestiae guas velsint commodi repudiandae cons numpuam blanditis harum quisquameius sed odit optio,eaque rerum! provident similique accusantiu obcaecati tenetur iure eius.",
-            style:
-                GoogleFonts.poppins(fontWeight: FontWeight.w400, fontSize: 12),
+            style: GoogleFonts.poppins(
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                color: const Color(0xff707070)),
             maxLines: 5,
           )
         ],

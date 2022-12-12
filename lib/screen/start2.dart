@@ -17,7 +17,7 @@ class Start2 extends StatelessWidget {
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.bold, fontSize: 25)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Center(

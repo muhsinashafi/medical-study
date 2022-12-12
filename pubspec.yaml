@@ -37,6 +37,19 @@ dependencies:
   google_fonts: ^3.0.1
   smooth_page_indicator: ^1.0.0+2
   auto_size_text: ^3.0.0
+  url_launcher: ^6.1.6
+  flutter_rating_bar: ^4.0.1
+  open_file: ^3.2.1
+  dio: ^4.0.6
+  path_provider: ^2.0.11
+  file_picker: ^4.1.3
+  rive: ^0.9.0
+  intl: ^0.17.0
+  fluttertoast: ^8.1.1
+  flutter_countdown_timer: ^4.1.0
+  provider: ^6.0.4
+  animated_text_kit: ^4.2.1
+  #services: ^0.0.1
   
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -64,34 +77,34 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-   - assets/nature1.png
-   - assets/logo1.png
-   - assets/logo2.png
-   - assets/logo3.png
-   - assets/logo4.png
-   - assets/logo6.png
-   - assets/logo0.png
-   - assets/home1.png
-   - assets/Rectangle 634.png
-   - assets/Rectangle 635.png
-   - assets/category1.png
-   - assets/category2.png
-   - assets/category3.png
-   - assets/category4.png
-   - assets/image1.png
-   - assets/image2.png
-   - assets/elip1.png
-   - assets/image3.png
-   - assets/image4.png
-   - assets/image5.png
-   - assets/image6.png
-   - assets/image7.png
-   - assets/image8.png
-   - assets/image9.png
-   - assets/image11.png
-   - assets/image12.png
-   - assets/image13.png
-   - assets/image14.png
+   - assets/
+   
+  # - assets/nature1.png
+  # - assets/logo1.png
+  # - assets/logo2.png
+  # - assets/logo3.png
+  #  - assets/logo6.png
+   #- assets/logo0.png
+   #- assets/Rectangle 634.png
+   #- assets/Rectangle 635.png
+   #- assets/category1.png
+   #- assets/category2.png
+   #- assets/category3.png
+   #- assets/category4.png
+   #- assets/image1.png
+   #- assets/image2.png
+   #- assets/elip1.png
+   #- assets/image3.png
+   #- assets/image4.png
+   #- assets/image5.png
+   #- assets/image6.png
+   #- assets/image7.png
+   #- assets/image8.png
+   #- assets/image9.png
+   #- assets/image11.png
+   #- assets/image12.png
+   #- assets/image13.png
+   #- assets/image14.png
 
  
   # To add assets to your application, add an assets section, like this:

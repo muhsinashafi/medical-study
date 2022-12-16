@@ -17,13 +17,18 @@ class HomeContInfo extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              buildInfo(
-                  size, context, "assets/image2.png", "assets/image3.png"),
+              buildInfo(size, context, "assets/image2.png", "assets/image3.png",
+                  "Lorem ipsum dolor sit amet", "Bangaluru"),
               const SizedBox(
                 width: 20,
               ),
-              buildInfo(
-                  size, context, "assets/image2.png", "assets/image3.png"),
+              buildInfo(size, context, "assets/image2.png", "assets/image3.png",
+                  "Lorem ipsum dolor sit amet", "Bangaluru"),
+              const SizedBox(
+                width: 20,
+              ),
+              buildInfo(size, context, "assets/image2.png", "assets/image3.png",
+                  "Lorem ipsum dolor sit amet", "Bangaluru"),
             ],
           ),
         ),
@@ -31,8 +36,8 @@ class HomeContInfo extends StatelessWidget {
     );
   }
 
-  Container buildInfo(
-      Size size, BuildContext context, String image, String logo) {
+  Container buildInfo(Size size, BuildContext context, String image,
+      String logo, String text, String place) {
     return Container(
       height: 200,
       width: 200,
@@ -72,7 +77,7 @@ class HomeContInfo extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 10),
             child: Text(
-              "Lorem ipsum dolor sit amet",
+              text,
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 12),
             ),
@@ -80,7 +85,7 @@ class HomeContInfo extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 10),
             child: Text(
-              "Bangaluru",
+              place,
               style: GoogleFonts.poppins(fontSize: 10),
             ),
           ),

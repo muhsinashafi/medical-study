@@ -17,7 +17,7 @@ class HomeCategory extends StatelessWidget {
           children: [
             Container(
               height: size.height / 4.5,
-              width: size.width / 1,
+              // width: size.width / 1,
               padding: const EdgeInsets.only(top: 10),
               color: const Color(0xff2A8B9E),
               child: Column(

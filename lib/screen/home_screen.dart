@@ -13,6 +13,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    TextStyle fonts =
+        GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.bold);
+    Color color = const Color(0xff2A8B9E);
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -49,17 +52,13 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "Welcome to ",
-                            style: GoogleFonts.poppins(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
+                          Text("Welcome to ", style: fonts),
                           Text(
                             "Medical  Studies",
                             style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: const Color(0xff2A8B9E),
+                              color: color,
                             ),
                           )
                         ],
@@ -121,7 +120,7 @@ class HomeScreen extends StatelessWidget {
                           width: size.width / 4,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color(0xff2A8B9E)),
+                              color: color),
                           child: Center(
                             child: Text(
                               "Explore",

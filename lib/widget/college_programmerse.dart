@@ -8,6 +8,36 @@ class CollegeProgrammer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    return ListView(
+      // scrollDirection: Axis.vertical,
+      children: [
+        buildProgrammer(
+          size,
+          "B.Tech",
+          "No. of Courses: ",
+          "2 Courses",
+          "(126 Seats) ",
+          "Eligibility Criteria:",
+          "Lorem ipsum dolor sit amet consectetur adipisicing molestiae guas velsint commodi repudiandae cons numpuam blanditis harum quisquameius sed odit optio,eaque rerum! provident similique accusantiu obcaecati tenetur iure eius.",
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        buildProgrammer(
+          size,
+          "B.Tech",
+          "No. of Courses: ",
+          "2 Courses",
+          "(126 Seats) ",
+          "Eligibility Criteria:",
+          "Lorem ipsum dolor sit amet consectetur adipisicing molestiae guas velsint commodi repudiandae cons numpuam blanditis harum quisquameius sed odit optio,eaque rerum! provident similique accusantiu obcaecati tenetur iure eius.",
+        ),
+      ],
+    );
+  }
+
+  Container buildProgrammer(Size size, String courseName, String courseNo,
+      String number, String numberofseats, String eligibility, String text) {
     return Container(
       height: 210,
       //size.height / 3.4,
@@ -22,7 +52,7 @@ class CollegeProgrammer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "B.Tech",
+            courseName,
             style:
                 GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w600),
           ),
@@ -32,19 +62,19 @@ class CollegeProgrammer extends StatelessWidget {
           Row(
             children: [
               Text(
-                "No. of Courses: ",
+                courseNo,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w400, fontSize: 12),
               ),
               Text(
-                "2 Courses",
+                number,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w600,
                     fontSize: 12,
                     color: const Color(0xff4BB4C8)),
               ),
               Text(
-                "(126 Seats) ",
+                numberofseats,
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.w400, fontSize: 12),
               ),
@@ -54,7 +84,7 @@ class CollegeProgrammer extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "Eligibility Criteria:",
+            eligibility,
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w400,
                 fontSize: 12,
@@ -64,7 +94,7 @@ class CollegeProgrammer extends StatelessWidget {
             height: 10,
           ),
           AutoSizeText(
-            "Lorem ipsum dolor sit amet consectetur adipisicing molestiae guas velsint commodi repudiandae cons numpuam blanditis harum quisquameius sed odit optio,eaque rerum! provident similique accusantiu obcaecati tenetur iure eius.",
+            text,
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w400,
                 fontSize: 12,

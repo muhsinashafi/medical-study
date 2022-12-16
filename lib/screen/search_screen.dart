@@ -14,12 +14,39 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   static List<SearchCollege> popularColleges = [
-    SearchCollege('assets/image2.png', 'assets/image3.png',
-        'Alaska Bible College', "palmer,AK"),
-    SearchCollege('assets/image2.png', 'assets/image3.png', 'Maharajas College',
-        "palmer,AK"),
     SearchCollege(
-        'assets/image2.png', 'assets/image3.png', 'M.E.s College', "palmer,AK"),
+      'assets/image2.png',
+      'assets/image3.png',
+      'Alaska Bible College',
+      "palmer,AK",
+      "4.56k",
+      "4-year.Private,Suburban",
+      "100% graduation rate",
+      "100% placement",
+      "NAAC Rank 23",
+    ),
+    SearchCollege(
+      'assets/image2.png',
+      'assets/image3.png',
+      'Alaska Bible College',
+      "palmer,AK",
+      "4.56k",
+      "4-year.Private,Suburban",
+      "100% graduation rate",
+      "100% placement",
+      "NAAC Rank 23",
+    ),
+    SearchCollege(
+      'assets/image2.png',
+      'assets/image3.png',
+      'Alaska Bible College',
+      "palmer,AK",
+      "4.56k",
+      "4-year.Private,Suburban",
+      "100% graduation rate",
+      "100% placement",
+      "NAAC Rank 23",
+    ),
   ];
   List<SearchCollege> display_List = List.from(popularColleges);
   void updateList(String value) {
@@ -34,6 +61,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    Image elips = Image.asset("assets/elip1.png");
     return SafeArea(
       child: Scaffold(
         body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -125,7 +153,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                 Padding(
                                   padding: const EdgeInsets.only(right: 20),
                                   child: Text(
-                                    "4.56k",
+                                    display_List[index].rate,
                                     style: GoogleFonts.poppins(
                                         fontSize: 12,
                                         color: const Color(0xff2A8B9E),
@@ -164,12 +192,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Image.asset("assets/elip1.png"),
+                                      elips,
+                                      // Image.asset("assets/elip1.png"),
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(left: 15),
                                         child: Text(
-                                          "4-year.Private,Suburban",
+                                          display_List[index].years,
                                           style: GoogleFonts.poppins(
                                               fontSize: 10,
                                               fontWeight: FontWeight.w500
@@ -185,12 +214,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Image.asset("assets/elip1.png"),
+                                      elips,
+                                      // Image.asset("assets/elip1.png"),
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(left: 15),
                                         child: Text(
-                                          "100% graduation rate",
+                                          display_List[index].graduation,
                                           style: GoogleFonts.poppins(
                                               fontSize: 10,
                                               fontWeight: FontWeight.w500),
@@ -204,12 +234,12 @@ class _SearchScreenState extends State<SearchScreen> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Image.asset("assets/elip1.png"),
+                                      elips,
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(left: 15),
                                         child: Text(
-                                          "100% placement",
+                                          display_List[index].placement,
                                           style: GoogleFonts.poppins(
                                               fontSize: 10,
                                               fontWeight: FontWeight.w500
@@ -225,13 +255,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Image.asset("assets/elip1.png"),
+                                      elips,
                                       Padding(
                                         padding: const EdgeInsets.only(
                                           left: 15,
                                         ),
                                         child: Text(
-                                          "NAAC Rank 23",
+                                          display_List[index].naccrank,
                                           style: GoogleFonts.poppins(
                                               fontSize: 10,
                                               fontWeight: FontWeight.w500

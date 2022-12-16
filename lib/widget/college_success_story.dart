@@ -30,15 +30,30 @@ class CollegeSuccessStory extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 20),
                 child: Row(
                   children: [
-                    buildStory(size),
+                    buildStory(
+                        size,
+                        "assets/nature1.png",
+                        "Rahul Sharma ",
+                        "IT Trainee ",
+                        "The great learning platform has helped me during the pandemic with my placements and to improve my knowledge "),
                     const SizedBox(
                       width: 20,
                     ),
-                    buildStory(size),
+                    buildStory(
+                        size,
+                        "assets/nature1.png",
+                        "Rahul Sharma ",
+                        "IT Trainee ",
+                        "The great learning platform has helped me during the pandemic with my placements and to improve my knowledge "),
                     const SizedBox(
                       width: 20,
                     ),
-                    buildStory(size)
+                    buildStory(
+                        size,
+                        "assets/nature1.png",
+                        "Rahul Sharma ",
+                        "IT Trainee ",
+                        "The great learning platform has helped me during the pandemic with my placements and to improve my knowledge ")
                   ],
                 ),
               ),
@@ -49,7 +64,8 @@ class CollegeSuccessStory extends StatelessWidget {
     );
   }
 
-  Container buildStory(Size size) {
+  Container buildStory(
+      Size size, String url, String name, String trainee, String text) {
     return Container(
       height: 170,
       width: 250,
@@ -76,12 +92,12 @@ class CollegeSuccessStory extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Rahul Sharma ",
+                      name,
                       style: GoogleFonts.poppins(
                           fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "IT Trainee ",
+                      trainee,
                       style: GoogleFonts.poppins(
                           fontSize: 10, fontWeight: FontWeight.w400),
                     ),
@@ -94,7 +110,7 @@ class CollegeSuccessStory extends StatelessWidget {
             height: 20,
           ),
           AutoSizeText(
-            "The great learning platform has helped me during the pandemic with my placements and to improve my knowledge ",
+            text,
             style:
                 GoogleFonts.poppins(fontSize: 12, fontWeight: FontWeight.w400),
           )
